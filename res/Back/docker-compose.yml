@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  back:
+    image: ${DOCKER_REGISTRY-}back
+    build:
+      context: .
+      dockerfile: Dockerfile
+  proxy:
+    image: nginx:mainline
